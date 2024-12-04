@@ -1,8 +1,21 @@
-let tuNombre = prompt("Para anotarte a la clase escribí tu nombre y apellido")
-let tuPractica = prompt("¿Qué horario preferís? (Debe ser un número)")
+const cupoMaximo = 12;
+let inscripciones = 0;
 
-if ((tuNombre == "") || (tuPractica === "") || isNaN(tuPractica)) {
-    alert("Vamos de nuevo, escribí tu nombre completo y elegí el horario para anotarte a la clase.")
-} else {
-    alert("Bienvenido " + tuNombre.trim().toUpperCase() + ", te anotaste en la clase de Yoga Integral a las " + tuPractica + " horas.")
+for (let i = 0; i < cupoMaximo; i++) {
+    let tuNombre = prompt("👋¡Hola! Para anotarte a la clase, escribí tu nombre y apellido");
+    let tuPractica = prompt("🥰 ¿Qué horario preferís? (Debe ser un número)");
+
+    if (tuNombre.trim() === "" || tuPractica.trim() === "" || isNaN(tuPractica)) {
+        alert("🤥 Vamos de nuevo. Asegurate de escribir tu nombre completo y que el horario sea un número.");
+        i--; // restar uno para repetir el intento
+    } else {
+        inscripciones++; // sumar un inscripto
+        alert("😍 Bienvenid@ " + tuNombre + ", te anotaste en la clase de Yoga Integral a las " + tuPractica + " horas.");
+        alert("Inscripciones realizadas: " + inscripciones + "/" + cupoMaximo);
+    }
+    // verificador
+    if (inscripciones === cupoMaximo) {
+        alert("Ya no hay cupo 🥺 ¡Probá con otro horario!");
+        break;
+    }
 }
