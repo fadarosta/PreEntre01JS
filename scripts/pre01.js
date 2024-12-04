@@ -1,9 +1,10 @@
-let tuNombre = prompt("Para anotarte a la clase escribí tu nombre completo")
+let tuNombre = prompt("Para anotarte a la clase escribí tu nombre y apellido")
+let tuPractica = prompt("¿Qué horario preferís?")
 
-if (tuNombre == "" ){
-    alert("Vamos de nuevo, escribí tu nombre completo para anotarte a la clase".)
+if ((tuNombre === "") && (tuPractica === "")) {
+    alert("Vamos de nuevo, escribí tu nombre completo y elegí el horario para anotarte a la clase.")
 } else {
-    alert("Bienvenido " + tuNombre + ", te anotaste en la clase de Yoga Integral.")
+    alert("Bienvenido " + tuNombre + ", te anotaste en la clase de Yoga Integral a las " + tuPractica + " horas.")
 }
 
 /*
