@@ -1,4 +1,4 @@
-const cupoMaximo = 12;
+const cupoMaximo = 2;
 let inscripciones = 0;
 
 for (let i = 0; i < cupoMaximo; i++) {
