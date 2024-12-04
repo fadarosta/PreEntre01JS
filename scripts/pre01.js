@@ -11,7 +11,7 @@ for (let i = 0; i < cupoMaximo; i++) {
     } else {
         inscripciones++; // sumar un inscripto
         alert("😍 Bienvenid@ " + tuNombre + ", te anotaste en la clase de Yoga Integral a las " + tuPractica + " horas.");
-        alert("Se ocuparon " + inscripciones + "/" + cupoMaximo + "lugares de la sala");
+        alert("Se ocuparon " + inscripciones + "de" + cupoMaximo + " lugares de la sala");
     }
     // verificador
     if (inscripciones === cupoMaximo) {
